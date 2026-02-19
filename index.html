@@ -159,79 +159,113 @@
     <!-- JavaScript -->
     <script>
         // Product Data - Updated with correct names and prices
-                        const products = [
+        
+                                const products = [
             { 
                 id: 1, 
                 title: "Layered Gold Necklace", 
                 price: "$89.99", 
                 image: "https://cdn.glozzo.store/images/detailed/87417-0_m_184638.jpg", 
-                description: "Waterproof & Hypoallergenic Stainless Steel Necklace. 48cm length with secure toggle closure. Tarnish-free gold plating." 
+                description: "Waterproof & Hypoallergenic Stainless Steel Necklace. 48cm length, toggle closure. 180-day warranty.",
+                waMsg: "Hi, I want to order the Layered Gold Necklace ($89.99).",
+                emailSubj: "Order Inquiry: Layered Gold Necklace",
+                emailBody: "Hi,\n\nI am interested in buying the Layered Gold Necklace ($89.99).\n\nPlease let me know the next steps for payment and shipping.\n\nThank you!"
             },
             { 
                 id: 2, 
                 title: "Elegance Hoop Earrings", 
                 price: "$45.99", 
                 image: "https://cdn.glozzo.store/images/detailed/89957-0_220706.jpg", 
-                description: "Classic gold-plated hoops crafted from hypoallergenic stainless steel. Lightweight, waterproof, and perfect for everyday elegance." 
+                description: "Classic gold-plated hoops. Hypoallergenic, waterproof, and perfect for everyday elegance.",
+                waMsg: "Hi, I want to order the Elegance Hoop Earrings ($45.99).",
+                emailSubj: "Order Inquiry: Elegance Hoop Earrings",
+                emailBody: "Hi,\n\nI am interested in buying the Elegance Hoop Earrings ($45.99).\n\nPlease let me know the next steps.\n\nThank you!"
             },
             { 
                 id: 3, 
                 title: "Pure Gold Pendant", 
                 price: "$120.00", 
                 image: "https://cdn.glozzo.store/images/detailed/87939-0_065728_1600_new_144054.jpg", 
-                description: "Stunning pure gold-look pendant on a delicate chain. Made with long-lasting gold plating over stainless steel. Waterproof and tarnish-free." 
+                description: "Stunning pure gold-look pendant. Long-lasting plating, waterproof, and tarnish-free.",
+                waMsg: "Hi, I want to order the Pure Gold Pendant ($120.00).",
+                emailSubj: "Order Inquiry: Pure Gold Pendant",
+                emailBody: "Hi,\n\nI am interested in buying the Pure Gold Pendant ($120.00).\n\nPlease let me know the next steps.\n\nThank you!"
             },
             { 
                 id: 4, 
                 title: "Brilliant Diamond Studs", 
                 price: "$250.00", 
                 image: "https://cdn.glozzo.store/images/detailed/88237-0_new_114715.jpg", 
-                description: "Sparkling brilliant-cut studs that mimic real diamonds. Set in hypoallergenic stainless steel posts. Secure, waterproof, and dazzlingly bright." 
+                description: "Sparkling brilliant-cut studs. Hypoallergenic posts, secure, and dazzlingly bright.",
+                waMsg: "Hi, I want to order the Brilliant Diamond Studs ($250.00).",
+                emailSubj: "Order Inquiry: Brilliant Diamond Studs",
+                emailBody: "Hi,\n\nI am interested in buying the Brilliant Diamond Studs ($250.00).\n\nPlease let me know the next steps.\n\nThank you!"
             },
             { 
                 id: 5, 
                 title: "Luxury Charm Bracelet", 
                 price: "$75.00", 
                 image: "https://cdn.glozzo.store/images/detailed/87720-0_074108_1600_133742_new_16591336_170929.jpg", 
-                description: "A delicate bracelet featuring exclusive luxury charms. Crafted from waterproof stainless steel with premium gold plating. Adjustable and safe for sensitive skin." 
+                description: "Delicate bracelet with luxury charms. Waterproof stainless steel, adjustable fit.",
+                waMsg: "Hi, I want to order the Luxury Charm Bracelet ($75.00).",
+                emailSubj: "Order Inquiry: Luxury Charm Bracelet",
+                emailBody: "Hi,\n\nI am interested in buying the Luxury Charm Bracelet ($75.00).\n\nPlease let me know the next steps.\n\nThank you!"
             },
             { 
                 id: 6, 
                 title: "Evening Pearl Set", 
                 price: "$180.00", 
                 image: "https://cdn.glozzo.store/images/detailed/87148-0_031406_1600_new.jpg", 
-                description: "Exquisite pearl set including necklace and earrings. High-luster imitation pearls set in hypoallergenic metal. Perfect for weddings and special evening events." 
+                description: "Exquisite pearl set (necklace + earrings). High-luster pearls, perfect for special events.",
+                waMsg: "Hi, I want to order the Evening Pearl Set ($180.00).",
+                emailSubj: "Order Inquiry: Evening Pearl Set",
+                emailBody: "Hi,\n\nI am interested in buying the Evening Pearl Set ($180.00).\n\nPlease let me know the next steps.\n\nThank you!"
             },
             { 
                 id: 7, 
                 title: "Modern Twist Ring", 
                 price: "$65.00", 
                 image: "https://cdn.glozzo.store/images/detailed/87447-0_new_1233283096.jpg", 
-                description: "A modern twist on the classic gold ring design. Waterproof stainless steel with durable gold plating. Comfortable fit for daily wear." 
+                description: "Modern twist gold ring design. Waterproof, durable plating, comfortable daily wear.",
+                waMsg: "Hi, I want to order the Modern Twist Ring ($65.00).",
+                emailSubj: "Order Inquiry: Modern Twist Ring",
+                emailBody: "Hi,\n\nI am interested in buying the Modern Twist Ring ($65.00).\n\nPlease let me know the next steps.\n\nThank you!"
             },
             { 
                 id: 8, 
                 title: "The Gold Edition Chain", 
                 price: "$300.00", 
                 image: "https://cdn.glozzo.store/images/detailed/87336-0_217326169426745a2eedfc09.jpg", 
-                description: "Bold and luxurious heavy-weight gold chain. Premium stainless steel construction with thick gold plating. Waterproof, tarnish-free, and designed to make a statement." 
+                description: "Bold heavy-weight gold chain. Premium stainless steel, thick plating, statement piece.",
+                waMsg: "Hi, I want to order The Gold Edition Chain ($300.00).",
+                emailSubj: "Order Inquiry: The Gold Edition Chain",
+                emailBody: "Hi,\n\nI am interested in buying The Gold Edition Chain ($300.00).\n\nPlease let me know the next steps.\n\nThank you!"
             }
-        ]; 
-        // Function to create product cards
+        ];
+
         function renderProducts() {
             const gallery = document.getElementById('product-gallery');
-            gallery.innerHTML = ''; // Clear existing content
+            gallery.innerHTML = ''; 
+
+            const myWhatsAppNumber = "8618889278426"; 
+            const myEmailAddress = "michaeljb1222@gmail.com";
 
             products.forEach(product => {
                 const card = document.createElement('div');
                 card.className = 'card';
                 
+                const waLink = `https://wa.me/${myWhatsAppNumber}?text=${encodeURIComponent(product.waMsg)}`;
+                const emailLink = `mailto:${myEmailAddress}?subject=${encodeURIComponent(product.emailSubj)}&body=${encodeURIComponent(product.emailBody)}`;
+
                 card.innerHTML = `
                     <img src="${product.image}" alt="${product.title}">
                     <div class="card-content">
                         <h3>${product.title}</h3>
                         <p class="price">${product.price}</p>
-                        <button class="btn-view">View Details</button>
+                        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
+                            <a href="${waLink}" target="_blank" class="btn-view" style="flex: 1; font-size: 0.9rem;">WhatsApp</a>
+                            <a href="${emailLink}" class="btn-view" style="flex: 1; font-size: 0.9rem; background-color: #333; color: #fff;">Email</a>
+                        </div>
                     </div>
                 `;
                 
@@ -239,7 +273,6 @@
             });
         }
 
-        // Run the function when page loads
         window.onload = renderProducts;
     </script>
 </body>
