@@ -204,15 +204,63 @@
 <script>
     // 1. Your Product Data - I updated this to match your screenshot images!
     const products = [
-        { id: 1, title: "Signature Ring", price: "$1,200", image: "1.jpg", description: "A stunning signature piece." },
-        { id: 2, title: "Elegance Collection", price: "$850", image: "2.jpg", description: "Refined elegance for any occasion." },
-        { id: 3, title: "Gold Necklace", price: "$450", image: "3.jpg", description: "Pure gold necklace with intricate details." },
-        { id: 4, title: "Diamond Studs", price: "$900", image: "4.jpg", description: "Brilliant diamond studs." },
-        { id: 5, title: "Luxury Bracelet", price: "$650", image: "5.jpg", description: "A bracelet that defines luxury." },
-        { id: 6, title: "Evening Set", price: "$1,500", image: "6.jpg", description: "Complete set for a perfect evening." },
-        { id: 7, title: "Modern Pearl", price: "$300", image: "8.jpg", description: "A modern twist on classic pearls." },
-        { id: 8, title: "The Gold Edition", price: "$2,000", image: "14.jpg", description: "Exclusive gold edition piece." }
-    ];
+  { 
+    id: 1, 
+    title: "Layered Gold Necklace", 
+    price: "$89.99", 
+    image: "1.jpg", 
+    description: "Elegant layered chain necklace perfect for any occasion." 
+  },
+  { 
+    id: 2, 
+    title: "Elegance Hoop Earrings", 
+    price: "$45.00", 
+    image: "2.jpg", 
+    description: "Classic gold hoops with a refined, polished finish." 
+  },
+  { 
+    id: 3, 
+    title: "Pure Gold Pendant", 
+    price: "$120.00", 
+    image: "3.jpg", 
+    description: "A stunning pure gold pendant with intricate detailing." 
+  },
+  { 
+    id: 4, 
+    title: "Brilliant Diamond Studs", 
+    price: "$250.00", 
+    image: "4.jpg", 
+    description: "Sparkling diamond studs that define luxury." 
+  },
+  { 
+    id: 5, 
+    title: "Luxury Charm Bracelet", 
+    price: "$75.00", 
+    image: "5.jpg", 
+    description: "A delicate bracelet featuring exclusive luxury charms." 
+  },
+  { 
+    id: 6, 
+    title: "Evening Pearl Set", 
+    price: "$180.00", 
+    image: "6.jpg", 
+    description: "Complete pearl set ideal for special evening events." 
+  },
+  { 
+    id: 7, 
+    title: "Modern Twist Ring", 
+    price: "$65.00", 
+    image: "7.jpg", 
+    description: "A modern twist on the classic gold ring design." 
+  },
+  { 
+    id: 8, 
+    title: "The Gold Edition Chain", 
+    price: "$300.00", 
+    image: "8.jpg", 
+    description: "Exclusive heavy-weight gold chain for a bold statement." 
+  }
+];
 
     const gallery = document.querySelector('.gallery');
     gallery.innerHTML = ''; // This clears the old hardcoded list so we can rebuild it with clicks
