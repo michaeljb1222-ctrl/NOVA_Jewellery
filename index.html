@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA Jewellery | Elegance Defined</title>
+    <!-- Google Fonts for a luxury feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --gold: #c5a059;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --grey: #f9f9f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--light); 
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* --- Header --- */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: var(--dark);
+            color: var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+        header h1 { font-size: 3rem; letter-spacing: 5px; text-transform: uppercase; }
+        header p { font-style: italic; color: #fff; margin-top: 10px; font-weight: 300; }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('1.jpg'); /* Uses your first image as a background */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        .hero-content h2 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* --- Gallery Section --- */
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; position: relative; display: inline-block; padding-bottom: 10px; }
+        .section-title h2::after {
+            content: '';
+            width: 50px; height: 2px; background: var(--gold);
+            position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-info { padding: 20px; text-align: center; }
+        .card-info h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--dark); }
+        .card-info p { color: var(--gold); font-weight: 600; font-size: 0.9rem; }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gold);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .hero { height: 30vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>NOVA</h1>
+        <p>Jewellery & Masterpieces</p>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Timeless Beauty</h2>
+            <p>Handcrafted pieces for your special moments.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Collection</h2>
+        </div>
+
+        <div class="gallery">
+            <!-- These use the filenames from your screenshot -->
+            <div class="card">
+                <img src="1.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>Signature Ring</h3><p>VIEW DETAILS</p></div>
+            </div>
+            <div class="card">
+                <img src="2.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>Elegance Collection</h3><p>VIEW DETAILS</p></div>
+            </div>
+            <div class="card">
+                <img src="3.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>Gold Necklace</h3><p>VIEW DETAILS</p></div>
+            </div>
+            <div class="card">
+                <img src="4.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>Diamond Studs</h3><p>VIEW DETAILS</p></div>
+            </div>
+            <div class="card">
+                <img src="5.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>Luxury Bracelet</h3><p>VIEW DETAILS</p></div>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>Evening Set</h3><p>VIEW DETAILS</p></div>
+            </div>
+             <div class="card">
+                <img src="8.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>Modern Pearl</h3><p>VIEW DETAILS</p></div>
+            </div>
+            <div class="card">
+                <img src="14.jpg" alt="Jewellery Piece">
+                <div class="card-info"><h3>The Gold Edition</h3><p>VIEW DETAILS</p></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Connect With NOVA</h2>
+        <p>Interested in a custom piece? Contact us today.</p>
+        <a href="mailto:your-email@example.com" class="contact-btn">Send an Inquiry</a>
+        <div style="margin-top: 30px; opacity: 0.6; font-size: 0.8rem;">
+            &copy; 2026 NOVA Jewellery. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html> 
