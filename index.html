@@ -159,65 +159,64 @@
     <!-- JavaScript -->
     <script>
         // Product Data - Updated with correct names and prices
-        const products = [
+                const products = [
             { 
                 id: 1, 
                 title: "Layered Gold Necklace", 
                 price: "$89.99", 
-                image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80", 
-                description: "Elegant layered chain necklace perfect for any occasion." 
+                image: "https://cdn.glozzo.store/images/detailed/87417-0_m_184638.jpg", 
+                description: "Waterproof & Hypoallergenic Stainless Steel Necklace. 48cm length with secure toggle closure. Tarnish-free gold plating." 
             },
             { 
                 id: 2, 
                 title: "Elegance Hoop Earrings", 
                 price: "$45.99", 
-                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80", 
-                description: "Classic gold hoops with a refined, polished finish." 
+                image: "https://cdn.glozzo.store/images/detailed/89957-0_220706.jpg", 
+                description: "Classic gold-plated hoops crafted from hypoallergenic stainless steel. Lightweight, waterproof, and perfect for everyday elegance." 
             },
             { 
                 id: 3, 
                 title: "Pure Gold Pendant", 
                 price: "$120.00", 
-                image: "https://images.unsplash.com/photo-1599643478518-17488fbbcd75?auto=format&fit=crop&w=600&q=80", 
-                description: "A stunning pure gold pendant with intricate detailing." 
+                image: "https://cdn.glozzo.store/images/detailed/87939-0_065728_1600_new_144054.jpg", 
+                description: "Stunning pure gold-look pendant on a delicate chain. Made with long-lasting gold plating over stainless steel. Waterproof and tarnish-free." 
             },
             { 
                 id: 4, 
                 title: "Brilliant Diamond Studs", 
                 price: "$250.00", 
-                image: "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?auto=format&fit=crop&w=600&q=80", 
-                description: "Sparkling diamond studs that define luxury." 
+                image: "https://cdn.glozzo.store/images/detailed/88237-0_new_114715.jpg", 
+                description: "Sparkling brilliant-cut studs that mimic real diamonds. Set in hypoallergenic stainless steel posts. Secure, waterproof, and dazzlingly bright." 
             },
             { 
                 id: 5, 
                 title: "Luxury Charm Bracelet", 
                 price: "$75.00", 
-                image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80", 
-                description: "A delicate bracelet featuring exclusive luxury charms." 
+                image: "https://cdn.glozzo.store/images/detailed/87720-0_074108_1600_133742_new_16591336_170929.jpg", 
+                description: "A delicate bracelet featuring exclusive luxury charms. Crafted from waterproof stainless steel with premium gold plating. Adjustable and safe for sensitive skin." 
             },
             { 
                 id: 6, 
                 title: "Evening Pearl Set", 
                 price: "$180.00", 
-                image: "https://images.unsplash.com/photo-1528114039593-43664da1e512?auto=format&fit=crop&w=600&q=80", 
-                description: "Complete pearl set ideal for special evening events." 
+                image: "https://cdn.glozzo.store/images/detailed/87148-0_031406_1600_new.jpg", 
+                description: "Exquisite pearl set including necklace and earrings. High-luster imitation pearls set in hypoallergenic metal. Perfect for weddings and special evening events." 
             },
             { 
                 id: 7, 
                 title: "Modern Twist Ring", 
                 price: "$65.00", 
-                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80", 
-                description: "A modern twist on the classic gold ring design." 
+                image: "https://cdn.glozzo.store/images/detailed/87447-0_new_1233283096.jpg", 
+                description: "A modern twist on the classic gold ring design. Waterproof stainless steel with durable gold plating. Comfortable fit for daily wear." 
             },
             { 
                 id: 8, 
                 title: "The Gold Edition Chain", 
                 price: "$300.00", 
-                image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80", 
-                description: "Exclusive heavy-weight gold chain for a bold statement." 
+                image: "https://cdn.glozzo.store/images/detailed/87336-0_217326169426745a2eedfc09.jpg", 
+                description: "Bold and luxurious heavy-weight gold chain. Premium stainless steel construction with thick gold plating. Waterproof, tarnish-free, and designed to make a statement." 
             }
         ];
-
         // Function to create product cards
         function renderProducts() {
             const gallery = document.getElementById('product-gallery');
