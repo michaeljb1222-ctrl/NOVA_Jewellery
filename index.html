@@ -58,55 +58,156 @@
 
         .hero-content h2 { font-size: 2.5rem; margin-bottom: 10px; }
 
-        /* --- Gallery Section --- */
-        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
-        .section-title { text-align: center; margin-bottom: 40px; }
-        .section-title h2 { font-size: 2rem; position: relative; display: inline-block; padding-bottom: 10px; }
-        .section-title h2::after {
-            content: '';
-            width: 50px; height: 2px; background: var(--gold);
-            position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-        }
+        <!-- --- Gallery Section --- -->
+<div class="container">
+    <h2 class="section-title">Our Collection</h2>
+    <p style="text-align: center; margin-bottom: 30px; color: var(--grey);">Tap any image to view details & videos on Instagram</p>
+    
+    <div class="gallery">
+        
+        <!-- Product 1 -->
+        <a href="https://instagram.com/novaj_ewellery" target="_blank" class="product-link">
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80" alt="Gold Necklace">
+                    <div class="overlay">
+                        <span>View on Instagram</span>
+                    </div>
+                </div>
+                <h3>Eternal Gold Necklace</h3>
+                <p class="price">$120.00</p>
+            </div>
+        </a>
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-        }
+        <!-- Product 2 -->
+        <a href="https://instagram.com/novaj_ewellery" target="_blank" class="product-link">
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Diamond Ring">
+                    <div class="overlay">
+                        <span>View on Instagram</span>
+                    </div>
+                </div>
+                <h3>Diamond Solitaire Ring</h3>
+                <p class="price">$250.00</p>
+            </div>
+        </a>
 
-        .card {
-            background: white;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
+        <!-- Product 3 -->
+        <a href="https://instagram.com/novaj_ewellery" target="_blank" class="product-link">
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Silver Earrings">
+                    <div class="overlay">
+                        <span>View on Instagram</span>
+                    </div>
+                </div>
+                <h3>Silver Drop Earrings</h3>
+                <p class="price">$85.00</p>
+            </div>
+        </a>
 
-        .card:hover { transform: translateY(-5px); }
+        <!-- Product 4 -->
+        <a href="https://instagram.com/novaj_ewellery" target="_blank" class="product-link">
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" alt="Gold Bracelet">
+                    <div class="overlay">
+                        <span>View on Instagram</span>
+                    </div>
+                </div>
+                <h3>Rose Gold Bracelet</h3>
+                <p class="price">$140.00</p>
+            </div>
+        </a>
 
-        .card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--grey);
-        }
+    </div>
+</div>
 
-        .card-content { padding: 20px; text-align: center; }
-        .card h3 { font-size: 1.2rem; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
-        .price { color: var(--gold); font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
-        .btn-view {
-            background-color: var(--gold);
-            color: var(--dark);
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-        .btn-view:hover { background-color: var(--dark); color: var(--gold); }
+<style>
+    .product-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        transition: transform 0.3s ease;
+    }
 
+    .product-card {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .product-link:hover .product-card {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(197, 160, 89, 0.3);
+    }
+
+    .image-wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .product-link:hover .image-wrapper img {
+        transform: scale(1.1);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .product-link:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay span {
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 2px solid #fff;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .product-card h3 {
+        font-size: 1.1rem;
+        margin: 15px 0 5px;
+        color: var(--dark);
+        text-align: center;
+    }
+
+    .product-card .price {
+        color: var(--gold);
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+</style>
         /* --- Footer --- */
         footer {
             background: var(--dark);
