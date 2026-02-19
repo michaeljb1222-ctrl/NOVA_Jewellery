@@ -1,1 +1,247 @@
 
+<!-- NOVA Jewellery - Fresh Build Oct 24 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA Jewellery | Elegance Defined</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --gold: #c5a059;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --grey: #f9f9f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* --- Header --- */
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            background: var(--dark);
+            color: var(--gold);
+            border-bottom: 3px solid var(--gold);
+        }
+
+        header h1 { font-size: 3rem; letter-spacing: 5px; text-transform: uppercase; }
+        header p { font-style: italic; color: #fff; margin-top: 10px; font-weight: 300; }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h2 { font-size: 2.5rem; margin-bottom: 10px; }
+
+        /* --- Gallery Section --- */
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; position: relative; display: inline-block; padding-bottom: 10px; }
+        .section-title h2::after {
+            content: '';
+            width: 50px; height: 2px; background: var(--gold);
+            position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--grey);
+        }
+
+        .card-content { padding: 20px; text-align: center; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+        .price { color: var(--gold); font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
+        .btn-view {
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .btn-view:hover { background-color: var(--dark); color: var(--gold); }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--dark);
+            color: var(--light);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        /* --- Mobile Fix --- */
+        @media (max-width: 768px) {
+            .container { max-width: 95%; padding: 0 15px; }
+            .gallery { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
+            header h1 { font-size: 2rem; }
+            .hero-content h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>NOVA Jewellery</h1>
+        <p>Elegance Defined</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Handcrafted pieces for your special moments.</h2>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Collection</h2>
+        </div>
+        <div class="gallery" id="product-gallery">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 NOVA Jewellery | Elegance Defined</p>
+        <p>Partnering with Glozzo - Top 2% Jewelry Worldwide | 1,441 Items Ready to Ship</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Product Data - Updated with correct names and prices
+        const products = [
+            { 
+                id: 1, 
+                title: "Layered Gold Necklace", 
+                price: "$89.99", 
+                image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=600&q=80", 
+                description: "Elegant layered chain necklace perfect for any occasion." 
+            },
+            { 
+                id: 2, 
+                title: "Elegance Hoop Earrings", 
+                price: "$45.99", 
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80", 
+                description: "Classic gold hoops with a refined, polished finish." 
+            },
+            { 
+                id: 3, 
+                title: "Pure Gold Pendant", 
+                price: "$120.00", 
+                image: "https://images.unsplash.com/photo-1599643478518-17488fbbcd75?auto=format&fit=crop&w=600&q=80", 
+                description: "A stunning pure gold pendant with intricate detailing." 
+            },
+            { 
+                id: 4, 
+                title: "Brilliant Diamond Studs", 
+                price: "$250.00", 
+                image: "https://images.unsplash.com/photo-1589128777073-263566ae5e4d?auto=format&fit=crop&w=600&q=80", 
+                description: "Sparkling diamond studs that define luxury." 
+            },
+            { 
+                id: 5, 
+                title: "Luxury Charm Bracelet", 
+                price: "$75.00", 
+                image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80", 
+                description: "A delicate bracelet featuring exclusive luxury charms." 
+            },
+            { 
+                id: 6, 
+                title: "Evening Pearl Set", 
+                price: "$180.00", 
+                image: "https://images.unsplash.com/photo-1528114039593-43664da1e512?auto=format&fit=crop&w=600&q=80", 
+                description: "Complete pearl set ideal for special evening events." 
+            },
+            { 
+                id: 7, 
+                title: "Modern Twist Ring", 
+                price: "$65.00", 
+                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80", 
+                description: "A modern twist on the classic gold ring design." 
+            },
+            { 
+                id: 8, 
+                title: "The Gold Edition Chain", 
+                price: "$300.00", 
+                image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80", 
+                description: "Exclusive heavy-weight gold chain for a bold statement." 
+            }
+        ];
+
+        // Function to create product cards
+        function renderProducts() {
+            const gallery = document.getElementById('product-gallery');
+            gallery.innerHTML = ''; // Clear existing content
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.title}">
+                    <div class="card-content">
+                        <h3>${product.title}</h3>
+                        <p class="price">${product.price}</p>
+                        <button class="btn-view">View Details</button>
+                    </div>
+                `;
+                
+                gallery.appendChild(card);
+            });
+        }
+
+        // Run the function when page loads
+        window.onload = renderProducts;
+    </script>
+</body>
+</html>
